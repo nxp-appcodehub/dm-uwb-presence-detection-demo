@@ -90,6 +90,7 @@ def handle_detection(ocpd_ntf):
             print(f'Selected target is #{detected_presence.id}\n')            
             if detected_presence.angle == 127: detected_presence.angle = previous_angle
             previous_angle = detected_presence.angle
+            detected_presence.status = 1
     else:
         print(f'no presence detected')
         clean_presence(detected_presence)
